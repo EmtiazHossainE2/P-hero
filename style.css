@@ -42,6 +42,9 @@ body{
     color: #22bedd;
     animation: typing 3s linear infinite;
 }
+.banner-right img{
+    border: 3px solid #09ccf3;
+}
 
 @keyframes typing {
     0% {
@@ -144,4 +147,131 @@ body{
     100%{
         content: '|';
     }
+}
+.banner-text{
+    margin: 40px 0;
+    line-height: 2;
+}
+.pbutton{
+    padding: 10px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #22bedd;
+    color: #fff;
+    cursor: pointer;
+    border: 4px solid #09ccf3;
+    transition: .5s linear;
+}
+.pbutton:hover{
+    background-color: transparent;
+    color: #09ccf3;
+}
+
+/* Gallery Area */
+.section-title{
+    text-align: center;
+}
+.section-title h1{
+    color: #09ccf3;
+    font-size: 35px;
+    margin: 50px 0;
+    border-left: 3px solid #09ccf3;
+    border-right: 3px solid #09ccf3;
+    display: inline-block;
+    padding: 0 10px;
+    line-height: .7;
+}
+.gallery{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.photo{
+    width: 280px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.border{
+    background-color: #fff;
+    position: absolute;
+    transition: .7s ease-in-out;
+}
+.border.top , .border.bottom{
+    width: 270px;
+    height: 4px;
+}
+.border.left , .border.right{
+    height: 270px;
+    width: 4px;
+}
+.border.top{
+    top: 5px;
+    right: 100%;
+}
+.border.bottom{
+    bottom: 5px;
+    left: 100%;
+}
+.border.left{
+    left: 5px;
+    top: 100%;
+}
+.border.right{
+    right: 5px;
+    bottom: 100%;
+}
+.photo:hover .border.top{
+    right: 6px;
+}
+.photo:hover .border.right{
+    bottom: 6px;
+}
+.photo:hover .border.bottom{
+    left: 6px;
+}
+.photo:hover .border.left{
+    top: 6px;
+}
+.photo-content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-left: 30px;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    transform: translateY(400px);
+    transition: .4s ease-in-out;
+}
+.photo:hover .photo-content{
+    transform: translateY(200px);
+}
+.photo::before{
+    content: '';
+    position: absolute;
+    left:0%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    opacity: 0;
+    transition: .5s linear;
+}
+.photo:hover::before{
+    opacity: 1;
+}
+/* Footer area  */
+footer {
+    text-align: center;
+    background-color: rgb(22, 24, 19);
+    color: #fff;
+    padding: 20px 0;
+    margin: 50px 0;
 }
