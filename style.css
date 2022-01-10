@@ -7,6 +7,10 @@ body{
     font-family: 'Raleway', sans-serif;
     background-color: #121212;
 }
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .banner{
     display: flex;
     height: 100vh;
@@ -17,11 +21,127 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .banner-right{
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.banner-title{
+    font-size: 60px;
+    position: relative;
+    white-space: nowrap;
+    color: transparent;
+}
+.banner-title::before{
+    content: 'Programming Hero';
+    position: absolute;
+    top: 0;
+    left:0;
+    color: #22bedd;
+    animation: typing 3s linear infinite;
+}
+
+@keyframes typing {
+    0% {
+        content: 'P|';
+    }
+    4% {
+        content: 'Pr|';
+    }
+    12% {
+        content: 'Pro|';
+    }
+    16% {
+        content: 'Prog|';
+    }
+    20% {
+        content: 'Progr|';
+    }
+    24% {
+        content: 'Progra|';
+    }
+    28% {
+        content: 'Program|';
+    }
+    32% {
+        content: 'Programm|';
+    }
+    36% {
+        content: 'Programmi|';
+    }
+    40% {
+        content: 'Programmin|';
+    }
+    44% {
+        content: 'Programming|';
+    }
+    48% {
+        content: 'Programming H|';
+    }
+    52% {
+        content: 'Programming He|';
+    }
+    56% {
+        content: 'Programming Her|';
+    }
+    60% {
+        content: 'Programming Hero|';
+    }
+    64%,
+    83%{
+        content: 'Programming Hero|';
+    }
+    84%{
+        content: 'Programming Her|';
+    }
+    85%{
+        content: 'Programming He|';
+    }
+    86%{
+        content: 'Programming H|';
+    }
+    87%{
+        content: 'Programming |';
+    }
+    88%{
+        content: 'Programming|';
+    }
+    89%{
+        content: 'Programmin';
+    }
+    90%{
+        content: 'Programmi|';
+    }
+    91%{
+        content: 'Programm|';
+    }
+    92%{
+        content: 'Program|';
+    }
+    93%{
+        content: 'Progra|';
+    }
+    94%{
+        content: 'Progr|';
+    }
+    95%{
+        content: 'Prog|';
+    }
+    96%{
+        content: 'Pro|';
+    }
+    97%{
+        content: 'Pr|';
+    }
+    98%{
+        content: 'P|';
+    }
+    99%{
+        content: '|';
+    }
+    100%{
+        content: '|';
+    }
 }
